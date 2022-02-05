@@ -88,9 +88,14 @@ for idx,el in enumerate(my_str_1):
     if el == r_limit:
        r_id = idx
     
-sub_str_1 = my_str_1[l_id+1:r_id]        
-print(sub_str_1)        
-
+sub_str_1 = my_str_1[l_id+1:r_id]   
+      
+print(sub_str_1) 
+print()      
+#или через поиск 
+l = my_str_1.find(l_limit)
+r = my_str_1.rfind(r_limit)      
+print(my_str_1[l+1:r])
 print()
 ########################################################88888888888
 
