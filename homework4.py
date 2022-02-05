@@ -65,10 +65,12 @@ my_lst_2 ="43 больше чем 34 но меньше чем 56".split()
 temp_lst =[]
 for i in my_lst_2:
     if i.isdigit():
-        temp_lst.append(int(i))
+        temp_lst.append(int(i)) 
         
-print(sum(temp_lst))        
-    
+# или через генератор sum([int(i) for i in my_list_2 if i.isdigit()])
+
+print(sum(temp_lst)
+  
 print()    
 #################################################### 777777777
 print('Задание 7')
