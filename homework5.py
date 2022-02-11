@@ -44,9 +44,9 @@ a = 'abcdeioozgyyqwerty123456'
 b = 'abcddeeiiooklyqwerty67890'
 
 def com_elm_func(str1,str2):
-    return set(str1) & set(str2) # пересечение множеств даст символы которые есть
+    return list(set(str1) & set(str2)) # пересечение множеств даст символы которые есть
                                  # в обеих строках хотя бы раз
-print(*sorted(com_elm_func(a,b))) # вывод с сортировкой для наглядности
+print(com_elm_func(a,b)) # вывод списка
 print()
 
 # 3. Написать функцию которой передается два параметра - две строки.
@@ -58,7 +58,7 @@ def com_elm_1_func(str1,str2):
             [i for i in com_elm_func(str1,str2) if str1.count(i)== 1]   # функцию из предыдущего примера
              if str2.count(j)==1]                                      
    
-print(*sorted(com_elm_1_func(a,b)))                            # передаваемые строки из предыдущего примера
+print(com_elm_1_func(a,b))                            # передаваемые строки из предыдущего примера
 print()
 
 # 4. Даны списки names и domains (создать самостоятельно).
