@@ -80,9 +80,9 @@ print()
 # но в каждой только по одному разу.
 
 def com_elm_1_func(str1,str2):     
-     return [j for j in                                                 #в генераторе списка используем
-            [i for i in com_elm_func(str1,str2) if str1.count(i)== 1]   # функцию из предыдущего примера
-             if str2.count(j)==1]                                      
+     return [ i for i in com_elm_func(str1,str2) if a.count(i)==1 and b.count(i)==1]   #в генераторе списка используем
+                                                                                        # функцию из предыдущего примера
+                                                  
    
 print(com_elm_1_func(a,b))                            # передаваемые строки из предыдущего примера
 print()
