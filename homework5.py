@@ -41,26 +41,23 @@ print()
 def out_min_old(pers):
     sort_list_old = sorted(pers, key=lambda item: item['age'])
     min = sort_list_old[0]['age']
-    for i in sort_list_old:
-       if i['age'] == min:
-           print(i['name'],':',i['age'])
+    return [i['name'] for i in sort_list_old if i['age'] == min]
+
 
 def out_max_name(pers):
     sort_list_name = sorted(pers, key=lambda item: len(item['name']),reverse = True)
     max_len = len(sort_list_name[0]['name'])
-    for i in sort_list_name:
-        if len(i['name'])== max_len:
-            print(i['name'])
-            
+    return [i['name'] for i in sort_list_name if len(i['name'])== max_len]
+   
 def average_old(pers):
     old_lst = sum([i['age'] for i in pers])/len(pers)
-    return print(round(old_lst,2))     # округлил до сотых
+    return round(old_lst,2)     # округлил до сотых
         
-out_min_old(lst)
+print(*out_min_old(lst),sep = '\n')
 print()
-out_max_name(lst)
+print(*out_max_name(lst),sep = '\n')
 print()
-average_old(lst)
+print(average_old(lst))
 
 # 2. Написать функцию которой передается два параметра - две строки.
 # Функция возвращает список в который поместить те символы,
