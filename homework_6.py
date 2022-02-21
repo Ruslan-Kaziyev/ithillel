@@ -18,17 +18,17 @@ def aver_perf(marks_list: list) -> float:
     return round(sum(marks_list) / len(marks_list), 2)
 
 
-def aver_marks_list(res_lst_dict: list) -> list:
+def aver_marks_list(person_marks_list: list) -> list:
     '''создает список средних оценок '''
     return [aver_perf(i['assessment']) for i in res_lst_dict]
 
 
-def less_than_5_perf(res_lst_dict: list) -> None:
+def less_than_5_perf(person_marks_list: list) -> None:
     '''вывод на экран тех, у кого средний балл меньше 5,а также среднего балла всей группы'''
-    for i in res_lst_dict:
+    for i in person_marks_list:
         if aver_perf(i['assessment']) < 5:
             print(f"{i['name']}".ljust(30), aver_perf(i['assessment']))
-    print('Средний балл группы:'.ljust(30), aver_perf(aver_marks_list(res_lst_dict)))
+    print('Средний балл группы:'.ljust(30), aver_perf(aver_marks_list(person_marks_list)))
 
 
 def create_aver_marks_dict(person_marks_list: list) -> dict:
